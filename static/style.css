@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: wheat;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo{
+    margin-right: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user{
+    font-size: 16px;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+main h1{
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.summary{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    flex: 1;
+    background-color: wheat;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #903838;
+}
+
+.card h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.card p{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.expense-form{
+    background-color: wheat;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid #903838;
+}
+
+.expense-form h2{
+    margin-bottom: 20px ;
+}
+
+.expense-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.expense-form label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.expense-form input , select{
+    padding: 12px;
+    padding-right: 2px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.expense-form button{
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 9px;
+    background-color: #ddd;
+    color: rgb(58, 53, 53);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.recent-expenses{
+    background-color: wheat;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.recent-expenses h2{
+    margin-bottom: 20px;
+}
+
+.expense-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+footer{
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #777;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 30px;
+}
+
+@media (max-width:768px){
+    .summary{
+        flex-direction: column;
+    }
+
+
+    .content-grid{
+        flex-direction: 1fr;
+    }
+
+    main{
+        padding: 20px;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+}
+
+.flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    z-index: 1000;
+
+    animation: disappear 3s forwards;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
